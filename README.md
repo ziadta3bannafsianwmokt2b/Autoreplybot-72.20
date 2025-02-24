@@ -1,5 +1,6 @@
 # Autoreplybot-72.20
 ## لاضافه رد لتقائي يجب عليك انت تنسخ الكود :
+js: 
 client.on('messageCreate', message => {
     
     if (message.author.bot) return;
