@@ -54,3 +54,10 @@ client.on('messageCreate', message => {
     }
 });
 client.login(""); // التوكن بتاعك
+
+try {
+
+} catch (error) {
+  console.error(error);  
+  console.warn(`Go to discord.gg/witon for help`)
+}
