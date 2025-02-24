@@ -1,28 +1,56 @@
-const { ActivityType } = require("discord.js");
-
-client.once("ready", () => {
-  console.log(`bot is online ${client.user.tag} ${client.username}`);
-  console.log(`Code by @72.20`);
-  console.log(`@discord.gg/witon`)
-
-client.user.setActivity('', {
-    typ: 'PLAYING', //  WATCHING STREAMING COMPETING LISTENING
+const { Client , GatewayIntentBits , Partials } = require ('discord.js')
+const client = new Client({
+    intents: ['Guilds', 'GuildMembers', 'GuildMessages', 'MessageContent', GatewayIntentBits.Guilds],
+    partials: [Partials.Channel],
   });
-    const randomActivity = activities[Math.floor(Math.random() * activities.length)];
+  exports.client = client;
 
-    client.user.setActivity(randomActivity, { type: 'PLAYING' }); // 
-  }, 10000);
+
+console.log(`
+                     .___         ___.                  _________ ________        ________  _______   
+  _____  _____     __| _/  ____   \_ |__   ___.__.  /\  \______  \\_____  \       \_____  \ \   _  \  
+ /     \ \__  \   / __ | _/ __ \   | __ \ <   |  |  \/      /    / /  ____/        /  ____/ /  /_\  \ 
+|  Y Y  \ / __ \_/ /_/ | \  ___/   | \_\ \ \___  |  /\     /    / /       \       /       \ \  \_/   \
+|__|_|  /(____  /\____ |  \___  >  |___  / / ____|  \/    /____/  \_______ \  /\  \_______ \ \_____  /
+      \/      \/      \/      \/       \/  \/                             \/  \/          \/       \/ 
+`);
+console.log('your bot is ready!');
+console.log('code by 72.20');
+console.log (`Discord id >> 877717735801487360`)
+console.log(`progarmming >>  discord.gg/witon
+services >> discord.gg/wick-s
+community >> discord.gg/wick-c
+wicks support >> discord.gg/kcz9VEBHp5`)
+
+
+client.on('messageCreate', message => {
+    
+    if (message.author.bot) return;
+
+    
+    if (message.content === '!ping') {
+        message.channel.send('!Pong ${client.ws.ping}')
+
+    }
 });
-client.on('error', (error) => {
-  console.error('حدثت مشكله توجه الى سيرفر الدعم ومنشن @72.20, error);
+client.on('messageCreate', message => {
+    
+    if (message.author.bot) return;
+
+    
+    if (message.content === 'السلام عليكم') {
+        message.channel.send('وعليكم السلام')
+
+    }
 });
-console.log('
-Wick on top 
-discord.gg/witon >>programming
-discord.gg/wick-c >>community
-discord.gg/wick-s >>store
-discord.gg/f3ayaD6q >>wicks bot support
-')
-client.login('توكن بوتك') 
-                if (presence.activities.length > 0) {
-                    console.log(chalk.magentaBright(`the activity of your bot is ${presence.activities[0].name}"`));
+client.on('messageCreate', message => {
+    
+    if (message.author.bot) return;
+
+    
+    if (message.content === '') {
+        message.channel.send('')
+
+    }
+});
+client.login(""); // التوكن بتاعك
